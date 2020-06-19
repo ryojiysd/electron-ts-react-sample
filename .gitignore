@@ -1,0 +1,13 @@
+*.DS_Store
+package-lock.json
+npm-debug.log
+node_modules
+tmp
+vendor
+*.sublime-*
+*.sqlite3
+*.db
+public/javascripts/app.js
+public/images/*.png
+coverage/
+

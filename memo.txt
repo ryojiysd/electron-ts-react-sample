@@ -1,0 +1,64 @@
+1. Node.js 14.4.0 のインストール。インストーラに追加のツールのインストールを聞かれたが，no.
+
+```
+npm config -g set proxy=http://proxygate2.nic.nec.co.jp:8080
+npm config -g set https-proxy=http://proxygate2.nic.nec.co.jp:8080
+npm config -g set strict-ssl=false
+```
+
+Global の設定を見に行かないモジュールがあるので
+```
+npm config set proxy=http://proxygate2.nic.nec.co.jp:8080
+npm config set https-proxy=http://proxygate2.nic.nec.co.jp:8080
+npm config set strict-ssl=false
+```
+
+これだった
+```
+SET ELECTRON_GET_USE_PROXY=true 
+SET GLOBAL_AGENT_HTTPS_PROXY=http://proxygate2.nic.nec.co.jp:8080
+```
+
+```
+npm init
+```
+
+実行時に必要なライブラリのインストール
+```
+npm install --save react react-dom redux react-redux
+```
+
+開発時に必要なライブラリのインストール
+```
+npm install --save-dev electron typescript eslint prettier eslint-config-prettier eslint-plugin-prettier webpack webpack-cli ts-loader
+npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+各ライブラリの TypeScript 用の型定義ファイルをインストール
+```
+npm install --save-dev @types/react @types/react-dom @types/redux @types/react-redux
+```
+
+
+### TypeScript
+
+```
+npx tsc --init
+```
+
+```tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es2019"
+    ],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+```

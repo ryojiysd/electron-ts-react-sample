@@ -1,0 +1,57 @@
+{
+  "name": "ts_react_electron",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --display-error-details -w --mode production",
+    "production": "webpack --mode=production",
+    "dev": "npm-run-all --parallel electron start",
+    "electron": "npx electron .",
+    "package": "npx electron-packager . sample --platform=win32 --arch=x64 --overwrite",
+    "lint": "npx eslint --ext .ts,tsx,js,jsx ./src",
+    "lint-fix": "npx eslint --ext .ts,tsx,js,jsx ./src --fix",
+    "test": "run-s lint test:*",
+    "test:unit": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "engines": {
+    "node": ">= 14",
+    "npm": ">= 6.14"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux": "^3.6.0",
+    "@typescript-eslint/eslint-plugin": "3.4.0",
+    "@typescript-eslint/parser": "3.4.0",
+    "electron": "^9.0.4",
+    "eslint": "7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-simple-import-sort": "5.0.3",
+    "eslint-plugin-standard": "4.0.1",
+    "html-webpack-plugin": "^4.3.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "^2.0.5",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
