@@ -1,6 +1,6 @@
 # Electron with React and TypeScript
 
-A simple project demonstrating how to create an electron application using TypeScript and React.
+A boilplate project demonstrating how to create an electron application using TypeScript and React.
 
 ## How to run
 

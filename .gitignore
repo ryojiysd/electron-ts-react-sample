@@ -7,7 +7,7 @@ vendor
 *.sublime-*
 *.sqlite3
 *.db
-public/javascripts/app.js
+public/javascripts/app.*
 public/images/*.png
 coverage/
 

@@ -21,8 +21,19 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "printWidth": 120,
+                "tabWidth": 2,
+                "useTabs": false,
+                "semi": true,
+                "singleuote": true
+            }
+        ]
     }
 }
